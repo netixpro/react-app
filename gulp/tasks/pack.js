@@ -1,4 +1,4 @@
-module.exports = function (paths) {
+module.exports = function (webpackConfig, paths) {
   var gulp = require('gulp'),
     $ = require('gulp-load-plugins')();
 

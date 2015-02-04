@@ -18,7 +18,7 @@ global.dist = paths.dist;
 gulp.task('clean', del.bind(null, [paths.dist]));
 
 gulp.task('build', ['clean'], function (cb) {
-  runSequence(['pages', 'bundle'], cb);
+  runSequence(['style', 'pages', 'pack', 'serve'], cb);
 });
 
 gulp.task('default', [], function (cb) {
