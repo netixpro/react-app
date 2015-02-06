@@ -22,7 +22,7 @@ gulp.task('build', ['clean'], function (cb) {
 });
 
 gulp.task('default', [], function (cb) {
-  runSequence(['style', 'serve'], cb);
+  runSequence(['serve'], cb);
 });
 
 gulp.task('style', require('./tasks/style')(paths));

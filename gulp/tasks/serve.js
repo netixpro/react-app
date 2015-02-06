@@ -18,7 +18,7 @@ module.exports = function (webpackConfig, paths) {
     server.listen(3000, "localhost", function (err) {
       if (err) throw new $.util.PluginError("webpack-dev-server", err);
 
-      gulp.src(paths.dist + '/index.html')
+      gulp.src(paths.app + '/index.html')
         .pipe($.open('', {url: 'http://localhost:3000'}));
 
     });

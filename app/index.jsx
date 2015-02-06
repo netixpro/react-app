@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import MainView from './component/MainView';
 import Home from './component/Home';
@@ -9,6 +7,8 @@ var Router = require('react-router');
 var { Route, DefaultRoute, RouteHandler, Link, NotFoundRoute } = Router;
 
 injectTapEvent();
+
+require('./less/main.less');
 
 var routes = (
   <Route handler={ MainView } path="/">
