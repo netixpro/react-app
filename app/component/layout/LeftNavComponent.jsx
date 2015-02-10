@@ -12,8 +12,7 @@ var LeftNavComponent = React.createClass({
         docked={false}
         isInitiallyOpen={false}
         menuItems={this.props.menuItems}
-        onChange={this.onClick}
-      />
+        onChange={this.onClick} className="left-nav" />
     );
   },
 

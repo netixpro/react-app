@@ -1,6 +1,6 @@
 import React from 'react';
 import LeftNavComponent from './layout/LeftNavComponent.jsx';
-import {AppCanvas, AppBar, RaisedButton} from 'material-ui';
+import {AppCanvas, AppBar, RaisedButton, LeftNav} from 'material-ui';
 var Router = require('react-router');
 var { Route, DefaultRoute, RouteHandler, Link, NotFoundRoute } = Router;
 
@@ -19,15 +19,15 @@ var MainView = React.createClass({
     return (
       <AppCanvas predefinedLayout={1}>
 
+        <LeftNav ref='leftNav' docked={false} menuItems={menuItems} />
+
         <AppBar
           className="mui-dark-theme"
           title={'kikoou'}
           onMenuIconButtonTouchTap={this._onMenuIconButtonTouchTap}
           zDepth={0}>
         </AppBar>
-
-        <LeftNavComponent ref='leftNav' menuItems={menuItems} />
-
+        
         <div className='page'>
           <RouteHandler />
         </div>
